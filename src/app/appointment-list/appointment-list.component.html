@@ -1,7 +1,7 @@
 <h2>Appointment List</h2>
 
 <div *ngFor="let appointment of appointments">
-  <p *ngIf="appointment.pet">
+  <p *ngIf="appointment.id != 0 && appointment.page == currentPage">
     Date: {{ appointment.date }} | Pet Name: {{ appointment.pet }} | Owner's
     Name:{{ appointment.owner }} | Contact Detail:
     {{ appointment.contact }}

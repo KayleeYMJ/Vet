@@ -1,6 +1,6 @@
-<a class="button" *ngIf="currentPage > 1" >last page</a>
-<a class="button" *ngIf="currentPage != totalPage">next page</a>
-<p>1/10 page</p>
+<a class="button" *ngIf="currentPage > 1" (click)="lastPage()">last page</a>
+<a class="button" *ngIf="currentPage != totalPage" (click)="nextPage()">next page</a>
+<p>{{ currentPage }} / {{ totalPage }} page</p>
 
 <p>
 <select [(ngModel)]="selectedValue" (change)="onChange($event)">

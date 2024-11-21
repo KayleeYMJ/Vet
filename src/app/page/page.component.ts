@@ -27,5 +27,18 @@ export class PageComponent {
     const select = event.target as HTMLSelectElement;
     this.globalService.item = select.value ? parseFloat(select.value) : 10;
     this.selectedValue = this.globalService.item;
+    this.globalService.currentPage = 1;
+    this.currentPage = this.globalService.currentPage
   }
+
+  nextPage(){
+    this.globalService.currentPage += 1,
+    this.currentPage = this.globalService.currentPage
+  }
+
+  lastPage(){
+    this.globalService.currentPage -= 1,
+    this.currentPage = this.globalService.currentPage
+  }
+
 }

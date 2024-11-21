@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { GlobalService } from '../global.service';
 import { appointments } from '../appointment';
 
 @Component({
@@ -8,7 +8,20 @@ import { appointments } from '../appointment';
   styleUrls: ['./appointment-list.component.css'],
 })
 export class AppointmentListComponent {
-  appointments = [...appointments];
+  appointments : { 
+    id: number;
+    pet: string;
+    date: string;
+    owner: string;
+    contact: number;
+    page: number; 
+  }[];
+  currentPage : number ;
+
+  constructor(private globalService: GlobalService) {
+    this.appointments = this.globalService.appointment,
+    this.currentPage = this.globalService.currentPage
+  };
 
   // share() {
   // window.alert('The product has been shared!');
