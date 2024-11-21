@@ -1,0 +1,15 @@
+<h2>Appointment List</h2>
+
+<div *ngFor="let appointment of appointments">
+  <p *ngIf="appointment.pet">
+    Date: {{ appointment.date }} | Pet Name: {{ appointment.pet }} | Owner's
+    Name:{{ appointment.owner }} | Contact Detail:
+    {{ appointment.contact }}
+  </p>
+
+  <!-- 
+    <button type="button" (click)="share()" (notify)="onNotify()">Share</button>
+  <app-page [pro]="product" (notify)="onNotify()">
+  </app-page>
+   -->
+</div>
