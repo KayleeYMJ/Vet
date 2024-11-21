@@ -10,4 +10,3 @@ contact details.
 Search results should be ordered by date/time.
 UI should be responsive for screen resolution, I.e. compatible with mobile devices.
 Data should support paging with 10, 20, 50, or 100 items per page with 10 being the default.
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/KayleeYMJ/Vet)
