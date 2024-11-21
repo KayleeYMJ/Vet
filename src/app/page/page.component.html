@@ -1,9 +1,21 @@
-<a class="button">last page</a>
-<a class="button">next page</a>
+<a class="button" *ngIf="currentPage > 1" >last page</a>
+<a class="button" *ngIf="currentPage != totalPage">next page</a>
 <p>1/10 page</p>
-<p>10 items / page</p>
 
-<!-- <p *ngIf="pro && pro.price > 700">
+<p>
+<select [(ngModel)]="selectedValue" (change)="onChange($event)">
+  <option *ngFor="let option of options" [value]="option">
+    {{ option }}
+  </option>
+</select>
+items / page
+</p>
+
+
+
+<!-- 
+  <p>You selected: {{ currentPage }}</p>
+  <p *ngIf="pro && pro.price > 700">
   <button type="button" (click)="notify.emit()">Notify Me</button>
 </p>
 -->
